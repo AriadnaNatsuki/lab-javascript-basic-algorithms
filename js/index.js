@@ -1,71 +1,43 @@
-// ------ Iteration 1: Names and Input ------
+// Iteration 1: Names and Input
 
-//Probando pull y push
+let name1 = "pablo";
+let name2 = "elizabeth";
+console.log(name2);
 
-let hacker1 = "Elizabeth";
-console.log(`The driver's name is ${hacker1}`);
-
-let hacker2 = "Rafa";
-console.log(`The navigator's name is ${hacker2}\n`);
-
-// ------ Iteration 2: Conditionals ------
-
-if(hacker1.length>hacker2.length)
-    console.log(`${hacker1} has the longest name. length = ${hacker1.length}\n`);
-
-else if(hacker1.length<hacker2.length)
-    console.log(`${hacker2} has the longest name. length = ${hacker2.length}\n`);
-
-else
-    console.log(`${hacker1} y ${hacker2} Both have equially long names. length = ${hacker1.length}\n`);
-
-// ------ Iteration 3: Loops ------
-
-console.log(hacker1.toUpperCase().split('').join(' '));         //3.1
-console.log(hacker2.split('').reverse().join(''));              //3.2
-
-if(hacker1.localeCompare(hacker2)<0)                            //3.3
-    console.log(`${hacker1} goes first.\n`);
-
-else if(hacker1.localeCompare(hacker2)>0)
-    console.log(`${hacker2} goes first.\n`);
-
-else
-    console.log(`${hacker1} and ${hacker2} are the same name.\n`);
+// Iteration 2: Conditionals
 
 
-// ------ Bonus 1 ------ 
+if (name1.length > name2.length) {
+    console.log(`el nombre mas largo es ${name1} y tiene ${name1.length} caracteres`);
+}
+else if (name1.length < name2.length) {
+    console.log(`el nombre mas largo es ${name2} y tiene ${name2.length} caracteres`);
+}
 
+else {
+    console.log(`Los 2 nombres tienen los mismos caracteres`);
 
-let text = `${'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus orci facilisis turpis ultricies laoreet. Nullam ultricies orci vitae urna pulvinar, ut hendrerit orci malesuada. In hac habitasse platea dictumst. Pellentesque tempor nunc sem, eget dignissim erat molestie eget. In tellus nisl, pulvinar sit amet efficitur non, ultrices quis ante. Fusce varius nisi sed orci porta, vel pellentesque metus varius. Vestibulum est odio, blandit sed aliquet a, ullamcorper nec lectus.'} 
-${'Nam eget commodo risus, sed fermentum enim. Etiam tempus nunc massa, tincidunt fringilla tellus ultrices sed. Sed sit amet congue nisi, sit amet aliquet massa. Ut ultrices elit sit amet nunc pharetra, euismod auctor ipsum auctor. Aenean viverra rutrum rutrum. Nunc congue libero imperdiet purus commodo euismod. Suspendisse pellentesque enim sem, quis sagittis neque efficitur vitae. Mauris scelerisque placerat mauris eget ornare. Sed imperdiet libero libero, non varius purus eleifend non. Duis tempus sed turpis at sollicitudin.'} 
-${'Duis non dapibus urna. Aliquam iaculis risus eros, eu vulputate ligula consectetur id. Cras ut viverra nisi, non malesuada augue. Curabitur pharetra iaculis fringilla. Sed eu arcu in est sagittis ultricies quis sed orci. Aliquam suscipit leo at ullamcorper ultricies. Suspendisse rutrum, purus non sodales ultrices, felis augue posuere ligula, non sagittis nunc quam feugiat enim. Phasellus ornare interdum quam condimentum euismod. Duis non ante dui. Curabitur in urna augue. Ut elementum eros auctor enim bibendum pretium. In sit amet diam sed felis condimentum aliquet.'}`;
+}
 
+  
+}
+// Iteration 3: Loops
+let name1 = "elizabeth";
+let name2 = "pablo";
+let masLargo = "";
 
-console.log(`The text has ${text.split(' ').length} words`);
+if (name1.length > name2.length) {
+    console.log(`el nombre mas largo es ${name1} y tiene ${name1.length} caracteres`);
+    masLargo = name1;
+}
+else if (name1.length < name2.length) {
+    console.log(`el nombre mas largo es ${name2} y tiene ${name2.length} caracteres`);
+    masLargo = name2;
 
-let textArray = text.split(' ');
-let numEt = 0;
+}
 
-for(let i=0;i<textArray.length;i++){
-    if(textArray[i]==='et')
-        numEt++;
-    }
+else {
+    console.log(`Los 2 nombres tienen los mismos caracteres`);
 
-console.log(`'et' appears ${numEt} times\n`);
-
-
-// ------ Bonus 2 ------ 
-
-let phrase = 'step on no pets';
-let phraseWorked = phrase.replace(/[-+()\s!,]/g, '').toLowerCase();  
-
-
-if(phraseWorked===phraseWorked.split('').reverse().join(''))
-    console.log(`${phrase} is a Palindrome`);
-
-else
-    console.log(`${phrase} is not a Palindrome`);
-
-
-
+}
+console.log(masLargo.split("").join(" ").toUpperCase());
